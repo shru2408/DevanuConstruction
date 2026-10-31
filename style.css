@@ -73,14 +73,47 @@ body {
 /* =========================
    NAVBAR
 ========================= */
-
+/*
 .navbar {
   position: relative;
   z-index: 10;
 
   padding: 25px 0;
 }
+*/
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
 
+  width: 100%;
+  z-index: 1000;
+
+  padding: 20px 0;
+
+  background: transparent;
+
+  transition:
+    box-shadow 0.3s ease,
+    background 0.3s ease,
+    backdrop-filter 0.3s ease;
+}
+
+
+/* Applied after scrolling */
+
+.navbar.scrolled {
+  background: rgba(23, 35, 59, 0.08);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.14);
+
+  border-bottom:
+    1px solid rgba(221, 220, 213, 0.08);
+}
 .nav-container {
   display: flex;
   align-items: center;
@@ -157,7 +190,7 @@ body {
   display: flex;
   align-items: center;
 
-  padding: 70px 0 90px;
+  padding: 140px 0 90px;
 }
 
 .hero-content {

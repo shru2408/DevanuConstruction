@@ -46,3 +46,19 @@ setInterval(updateCountdown, 1000);
 // Automatically update footer year
 document.getElementById("year").textContent =
   new Date().getFullYear();
+  
+// ================================
+// HEADER SHADOW ON SCROLL
+// ================================
+
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+
+  if (window.scrollY > 30) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+
+});
